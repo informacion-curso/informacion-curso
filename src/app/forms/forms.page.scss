@@ -1,0 +1,308 @@
+ion-slides {
+  max-height: 100%;
+  height: 100%;
+}
+
+.intro-tutorial {
+  max-height: 100%;
+  height: 100%;
+  background-image: url("../../assets/icon/redes.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.preload-tutorial,
+.purchase-tutorial,
+.registry-tutorial,
+.enjoy-tutorial {
+  max-height: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.registry-tutorial {
+  background-image: url("../../assets/icon/red-3.jpeg");
+}
+
+.preload-tutorial {
+  background-image: url("../../assets/icon/red-2.jpeg");
+}
+
+.purchase-tutorial {
+  background-image: url("../../assets/icon/red-3.jpeg");
+}
+
+.enjoy-tutorial {
+  background-image: url("../../assets/icon/red-2.jpeg");
+}
+
+.title_welcome {
+  color: var(--ion-color-light);
+  font-family: GothamMedium;
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.main_title {
+  color: var(--ion-color-light);
+  font-family: GothamBlack;
+  font-size: 1rem;
+}
+
+.underline {
+  --color: red;
+  font-family: 'Gotham-Black' !important;
+  font-size: 16px;
+  border-bottom: 2px solid red;
+  //background-image: linear-gradient(var(--color) 0%, var(--color) 100%);
+  //background-repeat: repeat-x;
+  //background-position: 1px 17px;
+  //background-size: 2px 5px;
+}
+
+.buttonsGrid {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: inline-flex;
+  #loginButton {
+      --background: #0E4E94;
+      font-family: GothamMedium;
+      font-size: 17px;
+      font-style: italic;
+      text-transform: none;
+  }
+  #registerButton {
+      --background: rgb(255, 255, 255);
+      color: #0E4E94;
+      font-family: GothamMedium;
+      font-size: 17px;
+      font-style: italic;
+      text-transform: none;
+  }
+  .noPadding {
+      margin: 0;
+      padding: 0;
+  }
+}
+
+ion-icon.arrow {
+  color: red;
+}
+
+ion-grid {
+  max-width: 75%;
+  display: inline-block;
+  align-self: flex-end;
+}
+
+.form-grid {
+  width: 100%;
+  display: inline-block;
+  align-self: flex-end;
+}
+
+.align-col-left {
+  text-align: left;
+}
+
+.text-container {
+  width: 250px;
+  text-align: left;
+}
+
+
+
+.jmp {
+  font-size: 1rem;
+  font-family: Gotham-Black;
+  font-style: normal;
+  text-transform: none;
+}
+
+.first-slide {
+  display: block;
+  align-self: unset;
+}
+
+.nextbtn {
+  text-align: right;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+
+
+/* .body { background: #222d2d url(../../assets/icon/redes.jpeg) repeat-x 0 0; } */
+
+ion-label {
+  overflow: visible !important;
+  h2 {
+      margin-top: 5px;
+      color: var(--ion-color-gray-title-shade);
+  }
+  p {
+      margin-top: 10px;
+      color: var(--ion-color-gray-text);
+  }
+}
+
+
+.form-fields {
+  color: #0F4E93;
+  font-family: 'Sriracha';
+  font-size: 1.2em;
+}
+
+.form-fields-i {
+  color: #000000;
+  font-family: 'Sriracha';
+  font-size: 1.2em;
+}
+
+.card-item {
+  --border-style: solid;
+  --border-width: 1px;
+  --border-color: #5a8ed1;
+  --color: #5a8ed1;
+  --border-radius: 13px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  --ion-background-color: #bebebe;
+}
+
+
+.pay-text {
+  font-size: 150%;
+  font-family: 'SigmarOne-Regular';
+  font-style: italic;
+  color: #EC1B2E;
+  margin-bottom: 5px;
+  margin-top: 0px !important;
+  align-items: center;
+  justify-content: center;
+  text-shadow: 7px 4px 5px blue;
+  //background-color: #ffffff;
+}
+
+.card-title {
+  font-size: 16px;
+  font-family: 'Sriracha';
+}
+
+.container-img {
+  width: 25%;
+  margin-right: 10px;
+}
+
+.btn {
+  --border-radius: 13px;
+  font-size: 14px;
+  font-family: 'Sriracha';
+  width: 100%;
+}
+
+form{
+  width: 100%;
+  margin: auto;
+}
+
+
+ion-col {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+
+ion-label {
+  font-family: 'Sriracha';
+  font-size: 16px;
+  color: #0E4E94;
+  padding-bottom: 2%;
+}
+
+.default-label {
+  font-family: 'Sriracha';
+  font-size: 16px;
+  color: #0E4E94;
+  padding-bottom: 2%;
+}
+
+ion-input {
+  border: solid 2px #555555;
+  border-radius: 10px;
+  --placeholder-color: #555555;
+  --placeholder-font-style: 'Sriracha';
+  text-align: center;
+  --padding-start: 0;
+  font-size: 10px;
+}
+
+
+.form-fields {
+  color: #0F4E93;
+  font-family: 'Sriracha';
+  font-size: 20px;
+  font-style: italic;
+}
+
+.btnRegister {
+  --background: #0E4E94;
+  font-family: 'Sriracha';
+  font-size: 14px;
+  width: 100%;
+  height: 50px;
+  --border-radius: 13px;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: grid;
+}
+
+.card {
+  width: 10vh;
+  background: #ffffff;
+  border-radius: 13px;
+  position: absolute;
+  left: 55px;
+  z-index: 2;
+  bottom: 15%;
+  border: 1px solid gray;
+}
+
+
+ion-icon {
+  height: 30px;
+  width: 30px;
+  color: var(--ion-color-primary);
+}
+.card-item {
+  --border-style: solid;
+  --border-width: 2px;
+  --border-color: #000000;
+  --color: #000000;
+  --border-radius: 13px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  --ion-background-color: #ffffff;
+  opacity: 0.8;
+}
+
+.title {
+  -ms-flex: initial;
+  flex: initial;
+  max-width: none !important;
+  pointer-events: none;
+  color: #0F4E93;
+  font-family: 'Sriracha';
+  font-size: 25px;
+}
+

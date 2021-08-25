@@ -1,0 +1,279 @@
+<ion-content>
+  <ion-slides fullscreen #Slider [options]="sliderOpts">
+
+    <ion-slide class="intro-tutorial">
+      <ion-grid class="first-slide">
+        <ion-row>
+          <ion-col>
+            <ion-text class="pay-text" color="primary">
+              <p class="pay-text">Dependecia a Internet</p>
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        <form #f="ngForm">
+          <ion-row>
+            <ion-col>
+              <ion-item class="card-item" lines="none">
+                <ion-grid class="form-grid">
+                  <ion-row>
+                    <ion-col>
+                      <ion-label class="title" style="margin: auto !important;" style="font-style: italic;">
+                        Datos Personales
+                      </ion-label>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col style="text-align: left;">
+                      <ion-label class="form-fields" position="stacked">Nombre</ion-label>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col>
+                      <ion-input class="form-fields-i" type="text" name="name" ngModel placeholder="Nombre" required>
+                      </ion-input>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col style="text-align: left;">
+                      <ion-label class="form-fields" position="stacked">Apellido</ion-label>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col>
+                      <ion-input class="form-fields-i" type="text" name="last" ngModel placeholder="Apellido" required>
+                      </ion-input>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col style="text-align: left;">
+                      <ion-label class="form-fields" position="stacked">Edad</ion-label>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col>
+                      <ion-input class="form-fields-i" type="number" name="edad" ngModel placeholder="Edad" required>
+                      </ion-input>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px;">
+                    <ion-col style="text-align: center;" offset="0">
+                      <ion-button type="submit" fill="clear" color="light" (click)="skipTo(4)">
+                        <ion-icon name="arrow-forward" style="zoom:2.5;" class="arrow"></ion-icon>
+                      </ion-button>
+                      <!-- <ion-button [hidden]="f.invalid" type="submit" fill="clear" color="light" (click)="skipTo(4)">
+                        <ion-icon name="arrow-forward" style="zoom:2.5;" class="arrow"></ion-icon>
+                      </ion-button> -->
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </form>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="registry-tutorial">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="align-col-left">
+
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="align-col-left">
+            <span class="underline main_title">REGISTRATE</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="text-container">
+              <ion-text class="text">
+                Elige tu plan y abre tu casillero, para obtener tu código de cliente y dirección en USA
+              </ion-text>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><br></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><br></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: right;" offset="8">
+            <ion-button fill="clear">
+              <ion-label></ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="nextbtn" style="text-align: right;" offset="8">
+            <ion-button fill="clear" color="light" (click)="skipTo(4)">
+              <ion-label class="jmp">Inicio</ion-label>
+              <ion-icon name="arrow-forward" style="zoom:1.5;" class="arrow"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row style="width: 0;">
+          <ion-col><br></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="purchase-tutorial">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="align-col-left">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="align-col-left">
+            <span class="underline main_title">COMPRA</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="text-container">
+              <ion-text class="text">
+                Compra en tus tiendas favoritas online y envia tus paquetes a tu casillero
+              </ion-text>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><br></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><br></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: right;" offset="8">
+            <ion-button fill="clear">
+              <ion-label></ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row style="width: 0;">
+          <ion-col><br></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="preload-tutorial">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="align-col-left">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="align-col-left">
+            <span class="underline main_title">Precarga</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="text-container" style="width: 240px;">
+              <ion-text class="text">
+                Sube tu factura para que podamos movilizar tus paquetes
+              </ion-text>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><br></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><br></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><br></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: right;" offset="8">
+            <ion-button fill="clear">
+              <ion-label></ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row style="width: 0;">
+          <ion-col><br></ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-slide>
+
+    <ion-slide class="enjoy-tutorial">
+      <ion-grid>
+        <ion-row>
+          <ion-col class="align-col-left">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="align-col-left">
+            <span class="underline main_title">DISFRUTA</span>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="text-container">
+              <ion-text class="text">
+                Recibe tus paquetes en nuestras agencias o en la puerta de tu casa
+              </ion-text>
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><br></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><br></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><br></ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col style="text-align: right;" offset="8">
+            <ion-button fill="clear">
+              <ion-label></ion-label>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col><br></ion-col>
+        </ion-row>
+      </ion-grid>
+      <div class="buttonsGrid">
+        <ion-grid style="max-width: 100%;" class="noPadding">
+          <ion-row class="noPadding">
+            <ion-col class="noPadding" size="6">
+              <ion-button id="loginButton" class="noPadding" expand="full" (click)="goto(true)">Iniciar sesión
+              </ion-button>
+            </ion-col>
+            <ion-col class="noPadding" size="6">
+              <ion-button id="registerButton" class="noPadding" expand="full" (click)="goto(false)">Registrarme
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>
