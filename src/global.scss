@@ -10,17 +10,205 @@
  */
 
 /* Core CSS required for Ionic components to work properly */
-@import "~@ionic/angular/css/core.css";
+
+@import '~@ionic/angular/css/core.css';
 
 /* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
+
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
 @import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+  font-family: 'RampartOne-Regular';
+  src: local('RampartOne-Regular'), url('./assets/fonts/RampartOne-Regular.ttf');
+}
+@font-face {
+  font-family: 'SigmarOne-Regular';
+  src: local('SigmarOne-Regular'), url('./assets/fonts/SigmarOne-Regular.ttf');
+}
+@font-face {
+  font-family: 'Sriracha';
+  src: local('Sriracha'), url('./assets/fonts/Sriracha.ttf');
+}
+
+// * {
+//     font-family: Gotham-Light, "Open Sans", sans-serif;
+// }
+
+
+ion-input {
+  --placeholder-color: var(--ion-color-gray-placeholder) !important;
+}
+
+.modal_register_terms .modal-wrapper {
+  --height: auto;
+  width: 90%;
+  max-width: 90%;
+  border-radius: 13px;
+  .ion-page {
+    position: relative;
+    display: block;
+    contain: content;
+    .inner-content {
+      max-height: 90vh;
+      overflow: auto;
+      padding: 10px;
+    }
+  }
+}
+
+.modal .modal-wrapper {
+  --height: auto;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 13px;
+  .ion-page {
+    position: relative;
+    display: block;
+    contain: content;
+    .inner-content {
+      max-height: 100vh;
+      overflow: auto;
+      padding: 10px;
+    }
+  }
+}
+
+.modal_confirmPayment {
+  --height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  .inner-content {
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.modal_code {
+  --height: 70%;
+  width: 100%;
+  border-radius: 0px;
+  .inner-content {
+    width: 600px;
+    height: 600px;
+    margin: auto;
+  }
+}
+
+ion-header {
+  ion-toolbar {
+    width: 98%;
+    margin: auto;
+    ion-title {
+      color: var(--ion-color-primary);
+      font-family: 'GothamBook';
+      font-size: 20px;
+      position: relative;
+      padding: 0;
+      text-align: left;
+      --border-width: 0 !important;
+      margin-left: 15px;
+    }
+  }
+  &.header-ios:after {
+    background: none;
+  }
+}
+
+ion-modal {
+  backdrop-filter: blur(57px);
+}
+
+.profile-component {
+  ion-item {
+    --padding-start: 30px;
+    ion-label {
+      overflow: visible !important;
+      h2 {
+        margin-top: 5px;
+        color: var(--ion-color-gray-title-shade);
+      }
+      p {
+        margin-top: 10px;
+        color: var(--ion-color-gray-text);
+      }
+    }
+  }
+}
+
+.frequently-asked-questions-lists {
+  ion-item {
+    --padding-start: 30px;
+    ion-label {
+      overflow: visible !important;
+      h3 {
+        margin-top: 5px;
+        color: var(--ion-color-gray-title-shade);
+      }
+      p {
+        margin-top: 10px;
+        color: var(--ion-color-gray-text);
+      }
+    }
+  }
+}
+
+// Applies a text wrap on ion options
+.alert-tappable.alert-radio {
+  height: auto;
+  contain: content;
+}
+
+.alert-radio-label.sc-ion-alert-md,
+.alert-radio-label.sc-ion-alert-ios {
+  white-space: normal;
+}
+
+.alerts {
+  input {
+    border: solid 1px #cecece !important;
+    border-radius: 13px !important;
+    --placeholder-color: #cecece !important;
+    --placeholder-font-style: 'GothamBook' !important;
+    text-align: left !important;
+    min-height: 50px !important;
+    --padding-start: 10px !important;
+    font-size: 12px !important;
+    padding-inline-start: 6px !important;
+  }
+}
+
+.alert-title {
+  font-size: 16px !important;
+  font-family: 'GothamMedium' !important;
+  font-style: italic !important;
+  color: var(--ion-color-primary) !important;
+}
+
+.alert-sub-title {
+  font-family: GothamBook !important;
+  font-size: 14px !important;
+  color: var(--ion-color-gray-text) !important;
+  white-space: break-spaces !important;
+}
+
+.gotham-medium-font {
+  font-family: 'GothamMedium' !important;
+  font-style: italic !important;
+}
+
+.li-ionic4-datePicker {
+  .modal-wrapper {
+    height: 470px;
+    max-height: 100%;
+    width: 312px;
+  }
+
+  ion-toolbar {
+    color: white im !important;
+  }
+}

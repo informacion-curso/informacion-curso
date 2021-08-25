@@ -1,27 +1,207 @@
-#container {
-  text-align: center;
+/* .body { background: #222d2d url(../../assets/icon/redes.jpeg) repeat-x 0 0; } */
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.body {
+  background: url("../../assets/icon/redes.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-label {
+  overflow: visible !important;
+  h2 {
+      margin-top: 5px;
+      color: var(--ion-color-gray-title-shade);
+  }
+  p {
+      margin-top: 10px;
+      color: var(--ion-color-gray-text);
+  }
 }
 
-#container p {
+
+.divisor {
+  border-bottom: 1px var(--ion-color-gray-placeholder) solid;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.form-fields {
+  color: #0F4E93;
+  font-family: 'Sriracha';
+  font-size: 1.2em;
+}
+
+.form-fields-i {
+  color: #000000;
+  font-family: 'Sriracha';
+  font-size: 1.3em;
+}
+
+.card-item {
+  --border-style: solid;
+  --border-width: 1px;
+  --border-color: #5a8ed1;
+  --color: #5a8ed1;
+  --border-radius: 13px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  --ion-background-color: #bebebe;
+
+}
+
+
+.pay-text {
+  font-size: 150%;
+  font-family: 'SigmarOne-Regular';
+  font-style: italic;
+  color: #EC1B2E;
+  margin-bottom: 5px;
+  margin-top: 0px !important;
+  //background-color: #ffffff;
+}
+
+.card-title {
   font-size: 16px;
-  line-height: 22px;
+  font-family: 'Sriracha';
+}
 
-  color: #8c8c8c;
+.container-img {
+  width: 25%;
+  margin-right: 10px;
+}
 
+ion-img {
+  padding: 0;
   margin: 0;
+  width: 50%;
 }
 
-#container a {
-  text-decoration: none;
+
+.btn {
+  --border-radius: 13px;
+  font-size: 14px;
+  font-family: 'Sriracha';
+  width: 100%;
 }
+
+
+
+
+div{
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+form{
+  width: 100%;
+  margin: auto;
+}
+
+ion-grid {
+  width: 80%;
+  margin: auto;
+  padding-top: 5%
+}
+
+ion-col {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+ion-label {
+  font-family: 'Sriracha';
+  font-size: 16px;
+  color: #0E4E94;
+  padding-bottom: 2%;
+}
+
+.default-label {
+  font-family: 'Sriracha';
+  font-size: 16px;
+  color: #0E4E94;
+  padding-bottom: 2%;
+}
+
+ion-input {
+  border: solid 1px #CECECE;
+  border-radius: 10px;
+  --placeholder-color: #CECECE;
+  --placeholder-font-style: 'Sriracha';
+  text-align: center;
+  --padding-start: 0;
+}
+
+ion-select {
+  border: 1px solid #CECECE;
+  border-radius: 13px;
+}
+
+.form-fields {
+  color: #0F4E93;
+  font-family: 'Sriracha';
+  font-size: 20px;
+  font-style: italic;
+}
+
+.btnRegister {
+  --background: #0E4E94;
+  font-family: 'Sriracha';
+  font-size: 14px;
+  width: 100%;
+  height: 50px;
+  --border-radius: 13px;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  display: grid;
+}
+
+.card {
+  width: 10vh;
+  background: #ffffff;
+  border-radius: 13px;
+  position: absolute;
+  left: 55px;
+  z-index: 2;
+  bottom: 15%;
+  border: 1px solid gray;
+}
+
+
+ion-icon {
+  height: 30px;
+  width: 30px;
+  color: var(--ion-color-primary);
+}
+.card-item {
+  --border-style: solid;
+  --border-width: 2px;
+  --border-color: #000000;
+  --color: #000000;
+  --border-radius: 13px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  --ion-background-color: #ffffff;
+  opacity: 0.8;
+}
+
+.title {
+  -ms-flex: initial;
+  flex: initial;
+  max-width: none !important;
+  pointer-events: none;
+  color: #0F4E93;
+  font-family: 'Sriracha';
+  font-size: 25px;
+}
+
