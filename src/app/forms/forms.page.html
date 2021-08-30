@@ -1,64 +1,103 @@
 <ion-content>
-  <ion-slides fullscreen #Slider [options]="sliderOpts">
+  <form fullscreen #f="ngForm" (ngSubmit)="submit(f)">
+    <ion-slides fullscreen #Slider [options]="sliderOpts">
+      <ion-slide class="intro-tutorial">
+        <ion-grid class="first-slide">
+          <ion-row>
+            <ion-col>
+              <ion-text class="pay-text" color="primary">
+                <p class="pay-text">Dependecia a Internet</p>
+              </ion-text>
+            </ion-col>
+          </ion-row>
 
-    <ion-slide class="intro-tutorial">
-      <ion-grid class="first-slide">
-        <ion-row>
-          <ion-col>
-            <ion-text class="pay-text" color="primary">
-              <p class="pay-text">Dependecia a Internet</p>
-            </ion-text>
-          </ion-col>
-        </ion-row>
-        <form #f="ngForm">
           <ion-row>
             <ion-col>
               <ion-item class="card-item" lines="none">
                 <ion-grid class="form-grid">
                   <ion-row>
                     <ion-col>
-                      <ion-label class="title" style="margin: auto !important;" style="font-style: italic;">
+                      <ion-label
+                        class="title"
+                        style="margin: auto !important"
+                        style="font-style: italic"
+                      >
                         Datos Personales
                       </ion-label>
                     </ion-col>
                   </ion-row>
                   <ion-row>
-                    <ion-col style="text-align: left;">
-                      <ion-label class="form-fields" position="stacked">Nombre</ion-label>
+                    <ion-col style="text-align: left">
+                      <ion-label class="form-fields" position="stacked"
+                        >Nombre</ion-label
+                      >
                     </ion-col>
                   </ion-row>
                   <ion-row>
                     <ion-col>
-                      <ion-input class="form-fields-i" type="text" name="name" ngModel placeholder="Nombre" required>
+                      <ion-input
+                        class="form-fields-i"
+                        type="text"
+                        name="name"
+                        ngModel
+                        placeholder="Nombre"
+                        required
+                      >
                       </ion-input>
                     </ion-col>
                   </ion-row>
                   <ion-row>
-                    <ion-col style="text-align: left;">
-                      <ion-label class="form-fields" position="stacked">Apellido</ion-label>
+                    <ion-col style="text-align: left">
+                      <ion-label class="form-fields" position="stacked"
+                        >Apellido</ion-label
+                      >
                     </ion-col>
                   </ion-row>
                   <ion-row>
                     <ion-col>
-                      <ion-input class="form-fields-i" type="text" name="last" ngModel placeholder="Apellido" required>
+                      <ion-input
+                        class="form-fields-i"
+                        type="text"
+                        name="last"
+                        ngModel
+                        placeholder="Apellido"
+                        required
+                      >
                       </ion-input>
                     </ion-col>
                   </ion-row>
                   <ion-row>
-                    <ion-col style="text-align: left;">
-                      <ion-label class="form-fields" position="stacked">Edad</ion-label>
+                    <ion-col style="text-align: left">
+                      <ion-label class="form-fields" position="stacked"
+                        >Edad</ion-label
+                      >
                     </ion-col>
                   </ion-row>
                   <ion-row>
                     <ion-col>
-                      <ion-input class="form-fields-i" type="number" name="edad" ngModel placeholder="Edad" required>
+                      <ion-input
+                        class="form-fields-i"
+                        type="number"
+                        name="edad"
+                        ngModel
+                        placeholder="Edad"
+                        required
+                      >
                       </ion-input>
                     </ion-col>
                   </ion-row>
-                  <ion-row style="margin-top: 10px;">
-                    <ion-col style="text-align: center;" offset="0">
-                      <ion-button type="submit" fill="clear" color="light" (click)="skipTo(1)">
-                        <ion-icon name="arrow-forward" style="zoom:2.5;" class="arrow"></ion-icon>
+                  <ion-row style="margin-top: 10px">
+                    <ion-col style="text-align: center" offset="0">
+                      <ion-button
+                        fill="clear"
+                        color="light"
+                        (click)="skipTo(1)"
+                      >
+                        <ion-icon
+                          name="arrow-forward"
+                          style="zoom: 2.5"
+                          class="arrow"
+                        ></ion-icon>
                       </ion-button>
                       <!-- <ion-button [hidden]="f.invalid" type="submit" fill="clear" color="light" (click)="skipTo(4)">
                         <ion-icon name="arrow-forward" style="zoom:2.5;" class="arrow"></ion-icon>
@@ -69,41 +108,51 @@
               </ion-item>
             </ion-col>
           </ion-row>
-        </form>
-      </ion-grid>
-    </ion-slide>
+        </ion-grid>
+      </ion-slide>
 
-    <ion-slide class="pregunta-1">
-      <ion-grid>
-        <form #f="ngForm">
+      <ion-slide class="pregunta-1">
+        <ion-grid>
           <ion-row>
             <ion-col>
               <ion-item class="card-item" lines="none">
                 <ion-grid class="form-grid">
                   <ion-row>
                     <ion-col>
-                      <ion-label class="title" style="margin: auto !important;" style="font-style: italic;">
+                      <ion-label
+                        class="title"
+                        style="margin: auto !important"
+                        style="font-style: italic"
+                      >
                         Pregunta No. 1
                       </ion-label>
                     </ion-col>
                   </ion-row>
                   <ion-row>
-                    <ion-col style="text-align: left;">
+                    <ion-col style="text-align: left">
                       <h2 class="form-fields" position="stacked">{{p1}}</h2>
                     </ion-col>
                   </ion-row>
                   <ion-row>
                     <ion-col>
                       <ion-list>
-                        <ion-radio-group value="">
+                        <ion-radio-group value="" name="P1" ngModel>
                           <ion-item lines="none">
                             <ion-label>Si</ion-label>
-                            <ion-radio slot="start" value="1" (click)="skipTo(2)"></ion-radio>
+                            <ion-radio
+                              slot="start"
+                              value="1"
+                              (click)="skipTo(2)"
+                            ></ion-radio>
                           </ion-item>
 
                           <ion-item lines="none">
                             <ion-label>No</ion-label>
-                            <ion-radio slot="start" value="0" (click)="skipTo(2)"></ion-radio>
+                            <ion-radio
+                              slot="start"
+                              value="0"
+                              (click)="skipTo(2)"
+                            ></ion-radio>
                           </ion-item>
                         </ion-radio-group>
                       </ion-list>
@@ -113,41 +162,51 @@
               </ion-item>
             </ion-col>
           </ion-row>
-        </form>
-      </ion-grid>
-    </ion-slide>
+        </ion-grid>
+      </ion-slide>
 
-    <ion-slide class="pregunta-2">
-      <ion-grid>
-        <form #f="ngForm">
+      <ion-slide class="pregunta-2">
+        <ion-grid>
           <ion-row>
             <ion-col>
               <ion-item class="card-item" lines="none">
                 <ion-grid class="form-grid">
                   <ion-row>
                     <ion-col>
-                      <ion-label class="title" style="margin: auto !important;" style="font-style: italic;">
+                      <ion-label
+                        class="title"
+                        style="margin: auto !important"
+                        style="font-style: italic"
+                      >
                         Pregunta No. 2
                       </ion-label>
                     </ion-col>
                   </ion-row>
                   <ion-row>
-                    <ion-col style="text-align: left;">
+                    <ion-col style="text-align: left">
                       <h2 class="form-fields" position="stacked">{{p2}}</h2>
                     </ion-col>
                   </ion-row>
                   <ion-row>
                     <ion-col>
                       <ion-list>
-                        <ion-radio-group value="">
+                        <ion-radio-group value="" name="P2" ngModel>
                           <ion-item lines="none">
                             <ion-label>Si</ion-label>
-                            <ion-radio slot="start" value="1" (click)="skipTo(3)"></ion-radio>
+                            <ion-radio
+                              slot="start"
+                              value="1"
+                              (click)="skipTo(3)"
+                            ></ion-radio>
                           </ion-item>
 
                           <ion-item lines="none">
                             <ion-label>No</ion-label>
-                            <ion-radio slot="start" value="0" (click)="skipTo(3)"></ion-radio>
+                            <ion-radio
+                              slot="start"
+                              value="0"
+                              (click)="skipTo(3)"
+                            ></ion-radio>
                           </ion-item>
                         </ion-radio-group>
                       </ion-list>
@@ -157,41 +216,51 @@
               </ion-item>
             </ion-col>
           </ion-row>
-        </form>
-      </ion-grid>
-    </ion-slide>
+        </ion-grid>
+      </ion-slide>
 
-    <ion-slide class="pregunta-3">
-      <ion-grid>
-        <form #f="ngForm">
+      <ion-slide class="pregunta-3">
+        <ion-grid>
           <ion-row>
             <ion-col>
               <ion-item class="card-item" lines="none">
                 <ion-grid class="form-grid">
                   <ion-row>
                     <ion-col>
-                      <ion-label class="title" style="margin: auto !important;" style="font-style: italic;">
+                      <ion-label
+                        class="title"
+                        style="margin: auto !important"
+                        style="font-style: italic"
+                      >
                         Pregunta No. 3
                       </ion-label>
                     </ion-col>
                   </ion-row>
                   <ion-row>
-                    <ion-col style="text-align: left;">
+                    <ion-col style="text-align: left">
                       <h2 class="form-fields" position="stacked">{{p3}}</h2>
                     </ion-col>
                   </ion-row>
                   <ion-row>
                     <ion-col>
                       <ion-list>
-                        <ion-radio-group value="">
+                        <ion-radio-group value="" name="P3" ngModel>
                           <ion-item lines="none">
                             <ion-label>Si</ion-label>
-                            <ion-radio slot="start" value="1" (click)="skipTo(4)"></ion-radio>
+                            <ion-radio
+                              slot="start"
+                              value="1"
+                              (click)="skipTo(4)"
+                            ></ion-radio>
                           </ion-item>
 
                           <ion-item lines="none">
                             <ion-label>No</ion-label>
-                            <ion-radio slot="start" value="0" (click)="skipTo(4)"></ion-radio>
+                            <ion-radio
+                              slot="start"
+                              value="0"
+                              (click)="skipTo(4)"
+                            ></ion-radio>
                           </ion-item>
                         </ion-radio-group>
                       </ion-list>
@@ -201,41 +270,51 @@
               </ion-item>
             </ion-col>
           </ion-row>
-        </form>
-      </ion-grid>
-    </ion-slide>
+        </ion-grid>
+      </ion-slide>
 
-    <ion-slide class="pregunta-4">
-      <ion-grid>
-        <form #f="ngForm">
+      <ion-slide class="pregunta-4">
+        <ion-grid>
           <ion-row>
             <ion-col>
               <ion-item class="card-item" lines="none">
                 <ion-grid class="form-grid">
                   <ion-row>
                     <ion-col>
-                      <ion-label class="title" style="margin: auto !important;" style="font-style: italic;">
+                      <ion-label
+                        class="title"
+                        style="margin: auto !important"
+                        style="font-style: italic"
+                      >
                         Pregunta No. 4
                       </ion-label>
                     </ion-col>
                   </ion-row>
                   <ion-row>
-                    <ion-col style="text-align: left;">
+                    <ion-col style="text-align: left">
                       <h2 class="form-fields" position="stacked">{{p4}}</h2>
                     </ion-col>
                   </ion-row>
                   <ion-row>
                     <ion-col>
                       <ion-list>
-                        <ion-radio-group value="">
+                        <ion-radio-group value="" name="P4" ngModel>
                           <ion-item lines="none">
                             <ion-label>Si</ion-label>
-                            <ion-radio slot="start" value="1" (click)="skipTo(5)"></ion-radio>
+                            <ion-radio
+                              slot="start"
+                              value="1"
+                              (click)="skipTo(5)"
+                            ></ion-radio>
                           </ion-item>
 
                           <ion-item lines="none">
                             <ion-label>No</ion-label>
-                            <ion-radio slot="start" value="0" (click)="skipTo(5)"></ion-radio>
+                            <ion-radio
+                              slot="start"
+                              value="0"
+                              (click)="skipTo(5)"
+                            ></ion-radio>
                           </ion-item>
                         </ion-radio-group>
                       </ion-list>
@@ -245,41 +324,50 @@
               </ion-item>
             </ion-col>
           </ion-row>
-        </form>
-      </ion-grid>
-    </ion-slide>
+        </ion-grid>
+      </ion-slide>
 
-    <ion-slide class="pregunta-5">
-      <ion-grid>
-        <form #f="ngForm">
+      <ion-slide class="pregunta-5">
+        <ion-grid>
           <ion-row>
             <ion-col>
               <ion-item class="card-item" lines="none">
                 <ion-grid class="form-grid">
                   <ion-row>
                     <ion-col>
-                      <ion-label class="title" style="margin: auto !important;" style="font-style: italic;">
+                      <ion-label
+                        class="title"
+                        style="margin: auto !important"
+                        style="font-style: italic"
+                      >
                         Pregunta No. 5
                       </ion-label>
                     </ion-col>
                   </ion-row>
                   <ion-row>
-                    <ion-col style="text-align: left;">
+                    <ion-col style="text-align: left">
                       <h2 class="form-fields" position="stacked">{{p5}}</h2>
                     </ion-col>
                   </ion-row>
                   <ion-row>
                     <ion-col>
                       <ion-list>
-                        <ion-radio-group value="">
+                        <ion-radio-group value="" name="P5" ngModel>
                           <ion-item lines="none">
                             <ion-label>Si</ion-label>
-                            <ion-radio slot="start" value="1"></ion-radio>
+                            <ion-radio
+                              slot="start"
+                              value="1"
+                              (click)="submit(f)"
+                            ></ion-radio>
                           </ion-item>
-
                           <ion-item lines="none">
                             <ion-label>No</ion-label>
-                            <ion-radio slot="start" value="0"></ion-radio>
+                            <ion-radio
+                              slot="start"
+                              value="0"
+                              (click)="submit(f)"
+                            ></ion-radio>
                           </ion-item>
                         </ion-radio-group>
                       </ion-list>
@@ -289,9 +377,42 @@
               </ion-item>
             </ion-col>
           </ion-row>
-        </form>
-      </ion-grid>
-    </ion-slide>
+        </ion-grid>
+      </ion-slide>
 
-  </ion-slides>
+      <ion-slide class="hack">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-item class="card-item" lines="none">
+                <ion-grid class="form-grid">
+                  <ion-row>
+                    <ion-col>
+                      <ion-label
+                        class="title"
+                        style="margin: auto !important"
+                        style="font-style: italic"
+                      >
+                        Gracias por responder...!
+                      </ion-label>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col style="text-align: left">
+                      <h2 class="form-fields" position="stacked">
+                        Enviar otra respuesta
+                      </h2>
+                    </ion-col>
+                  </ion-row>
+                  <ion-row>
+                    <ion-col> </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+    </ion-slides>
+  </form>
 </ion-content>
