@@ -1,4 +1,5 @@
 import { Component, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IonSlides, Platform } from '@ionic/angular';
 import { ApiService } from './../services/api.service';
@@ -10,7 +11,6 @@ import { LoadingService } from './../services/loading.service';
   styleUrls: ['./forms.page.scss'],
 })
 export class FormsPage implements OnInit {
-
   @ViewChildren('Slider')
   slider: QueryList<IonSlides>;
 
@@ -18,7 +18,7 @@ export class FormsPage implements OnInit {
   showNext = false;
   public sliderOpts: any = null;
   questions: Array<Object>;
-  q = []
+  q = [];
   p1;
   p2;
   p3;
@@ -44,9 +44,9 @@ export class FormsPage implements OnInit {
       initialSlide: 0,
     };
     const questionResponse = await this.apiService.getQuestions();
-    this.q = questionResponse.data
+    this.q = questionResponse.data;
     if (questionResponse.data) {
-      questionResponse.data.map(m => {
+      questionResponse.data.map((m) => {
         this.questions.push({
           show: true,
           question: m.pregunta,
@@ -54,12 +54,11 @@ export class FormsPage implements OnInit {
       });
     }
 
-    this.p1 = this.q[0].pregunta
-    this.p2 = this.q[1].pregunta
-    this.p3 = this.q[2].pregunta
-    this.p4 = this.q[3].pregunta
-    this.p5 = this.q[4].pregunta
-
+    this.p1 = this.q[0].pregunta;
+    this.p2 = this.q[1].pregunta;
+    this.p3 = this.q[2].pregunta;
+    this.p4 = this.q[3].pregunta;
+    this.p5 = this.q[4].pregunta;
   }
 
   ionViewDidEnter() {
@@ -70,7 +69,10 @@ export class FormsPage implements OnInit {
 
   async skipTo(index) {
     console.log(index);
-    const loading = await this.loadingService.showSimpleLoader('Cargando siguiente pregunta....', 500);
+    const loading = await this.loadingService.showSimpleLoader(
+      'Cargando siguiente pregunta....',
+      500
+    );
     loading.present();
     setTimeout(() => {
       this.cardsSliderArray[0].slideTo(index);
@@ -84,5 +86,14 @@ export class FormsPage implements OnInit {
     } else {
       this.router.navigate(['/plans']);
     }
+  }
+
+  async submit(form: NgForm) {
+    const loading = await this.loadingService.showSimpleLoader(
+      'Enviando respuesetas....',
+      500
+    );
+    loading.present();
+    console.log(form.value);
   }
 }
